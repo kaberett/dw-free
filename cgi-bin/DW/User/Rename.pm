@@ -73,7 +73,7 @@ sub can_rename_to {
         return 0;
     }
 
-    # make sure both from and to are present and, the to is a valid username form
+    # make sure both from and to are present, and the to is a valid username form
     $tousername = LJ::canonical_username( $tousername );
     unless ( $tousername ) {
         $errors->add( 'touser', 'rename.error.invalidto' );
